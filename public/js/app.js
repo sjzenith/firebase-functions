@@ -5,7 +5,7 @@ const requestLink = document.querySelector('.add-request');
 requestLink.addEventListener('click', ()=>{
     requestModal.classList.add('open');
 });
-
+/*
 //close request modal 바탕화면 클릭하면 모달종료
 //모달누르면 종료하게하면 입력값 못받음. 그냥 닫히니까
 requestModal.addEventListener('click', (e)=>{
@@ -13,3 +13,15 @@ requestModal.addEventListener('click', (e)=>{
         requestModal.classList.remove('open');
     }
 });
+
+// say hello function call
+const button = document.querySelector('.call');
+button.addEventListener('click', () => {
+// get function reference
+  const sayHello = firebase.functions().httpsCallable('sayHello');
+  // call the function and pass data
+  sayHello({ name: 'Shaun' }).then(result => {
+    console.log(result.data);
+  });
+});
+*/
