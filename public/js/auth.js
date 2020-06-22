@@ -22,7 +22,7 @@ registerForm.addEventListener('submit', (e) => {
     firebase.auth().createUserWithEmailAndPassword(email, password)
       .then(user => {
         console.log('registered', user);
-        registerForm.requestFullscreen();
+        registerForm.reset();
       })
       .catch(error => {
         registerForm.querySelector('.error').textContent = error.message;
